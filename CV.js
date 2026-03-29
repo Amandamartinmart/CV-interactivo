@@ -33,6 +33,13 @@ createApp({
           type: "education"
         },
         {
+          title: "Máster en Sistemas de Información Geográfica y Teledetección",
+          years: "2021 - 2022",
+          place: "Universidad de Extremadura",
+          coords: [39.480462696811266, -6.337808026962371],
+          type: "education"
+        },
+        {
           title: "Becaria en LPS Grupo",
           years: "Marzo 2022 - Junio 2022",
           place: "URJC",
@@ -59,13 +66,6 @@ createApp({
 - Comercialización de hogares
 - Tratamiento de incidencias de red
 - Soporte técnico al cliente`
-        },
-        {
-          title: "Máster en Sistemas de Información Geográfica y Teledetección",
-          years: "2024 - 2025",
-          place: "Universidad de Extremadura",
-          coords: [39.480462696811266, -6.337808026962371],
-          type: "education"
         }
       ]
     }
@@ -100,7 +100,7 @@ createApp({
       if (type === "education") {
         return "fa-solid fa-graduation-cap"
       } else if (type === "work") {
-        return "fa-solid fa-briefcase"
+        return "fa-solid fa-desktop"
       }
       return "fa-solid fa-circle"
     },
