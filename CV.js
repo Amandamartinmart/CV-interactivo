@@ -50,7 +50,7 @@ createApp({
 - Representación de datos en visores web (CARTO)`
         },
         {
-          title: "Consultora en Calidad del Dato",
+          title: "Consultora en Calidad del Dato en Nae",
           years: "Mayo 2023 - Actualidad",
           place: "Nae",
           coords: [40.426033147712175, -3.6874426171482013],
@@ -64,7 +64,7 @@ createApp({
           title: "Máster en Sistemas de Información Geográfica y Teledetección",
           years: "2024 - 2025",
           place: "Universidad de Extremadura",
-          coords: [38.99603587172794, -7.0149374958184865],
+          coords: [39.480462696811266, -6.337808026962371],
           type: "education"
         }
       ]
