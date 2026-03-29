@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>CV de Amanda Martín Martínez</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="CV.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="app">
+  <h1>CV de Amanda Martín Martínez</h1>
+  <p style="font-size:18px; color:#666; margin-top:5px;">
+  Un recorrido visual por mi formación y experiencia profesional
+  </p>
+
+  <div id="map"></div>
+
+  <!-- Timeline -->
+  <div class="timeline">
+    <div
+      v-for="(stage, index) in stages"
+      :key="index"
+      class="timeline-item"
+      :class="{ active: index === currentIndex }"
+      @click="goTo(index)"
+    >
+      <div class="dot">
+        <i :class="getIcon(stage.type)"></i>
+      </div>
+      <div class="label">
+        {{ stage.years }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Controles -->
+  <div class="controls">
+    <button @click="prev" :disabled="currentIndex === 0" class="nav-btn">
+    <i class="fa-solid fa-circle-left"></i>
+    </button>
+    <span>{{ currentStage.title }}</span>
+    <button @click="next" :disabled="currentIndex === stages.length - 1" class="nav-btn">
+    <i class="fa-solid fa-circle-right"></i>
+    </button>
+</div>
+</div>
+
+<!-- Vue -->
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<!-- Leaflet -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- JS -->
+<script src="CV.js"></script>
+
+</body>
+</html>
